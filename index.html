@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+     <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css'>
+     <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+
+     <script src="https://www.google.com/recaptcha/api.js" async defer>
+     </script>
+    <style>
+      html {
+        font-size: 62.5%; 
+      }
+      body, html, ul, p, div, h3 {
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+      body {
+        font-size: 2rem;
+        font-family: 'Baloo Bhai', sans-serif;
+      }
+      .wrapper {
+        background-color: white;
+        /*#006600;*/
+      }
+      main {
+        max-width: 66%;
+        margin: 0 auto;
+        background-color: white;
+        /*#66ff66;*/
+      }
+      i {
+        margin-right: 0.8rem;
+        margin-left: 0.8rem;
+      }
+      li {
+        list-style: none;
+      }
+            h3 {
+        text-align: center;
+        padding-top: 6rem;
+        padding-bottom: 4rem;
+        
+        margin-bottom: 2rem;
+        font-weight: 900;
+        font-size: 4rem;
+      }
+/* NAVIGATION BAR */
+      .flex-nav {
+        background-color: black;
+        position: fixed;
+        width: 100%;
+        display: flex;
+        z-index:2;
+      }
+      .flex-nav p{
+        display: flex;
+        flex-basis: 60%;
+        justify-content: center;
+      }
+      .flex-nav ul {
+        display: flex;
+        justify-content: center;
+        flex-basis: 40%;
+      }
+      .flex-nav ul li {
+        color: white;
+        padding-right: 3rem;
+
+      }
+      .flex-nav ul li a {
+        text-decoration: none;
+        color: inherit;
+      }
+/* INTRO SECTION */
+      #main h3{
+        position: absolute;
+        top: -2rem;
+        left: 47%;
+        z-index: 1;
+        /*display: inline;*/
+        /*margin-top: 3rem;*/
+      /*  overflow: hidden;
+        position: absolute;
+      }
+      #main {
+      /* display:flex;
+       min-width: 100%;*/
+      }
+      #intro{
+        position: relative;
+        display: flex;
+        background-color: white;
+        /*#00e600;*/
+        border-left: 1px solid black;
+        border-right: 1px solid black;
+        padding-bottom: 5rem;
+        justify-content: space-around;
+        /*min-height: 50rem;*/
+        /*overflow: hidden;*/
+      }
+      #intro div{    
+        margin-top: 15rem;
+      }
+      #text {
+     
+      }
+      #selfimage{
+      
+      }
+      #text p {
+        max-width: 35rem;
+        text-align: center;
+        margin-top: 1rem;      
+      }
+      #text p:last-child i {
+        font-size: 2rem;
+      }
+      #selfimage img{
+        height: 25rem;
+        width: 32.5rem;
+        border-radius: 25rem;    
+      }
+/* PORTFOLIO SECTION*/
+      #portfolio {
+        padding-bottom: 6rem;
+        border-top: 1px solid black;
+        border-left: 1px solid black;
+        border-right: 1px solid black;
+        border-bottom: 1px solid black;
+      }
+      h3 {
+        text-align: center;
+        padding-top: 6rem;
+        padding-bottom: 4rem;
+        
+        margin-bottom: 2rem;
+        font-weight: 900;
+        font-size: 4rem;
+      }
+      #images {
+        display: flex;
+        flex-flow: row wrap;
+        min-height: 50rem;
+        justify-content: space-around;
+        align-items:center;
+        padding-bottom: 3rem;   
+      }
+      #images img {
+        height: 15rem;
+        width: 22.5rem;
+        flex: 0 0 40%;
+      }
+/* CONTACT SECTION */
+      #contact {
+        overflow: hidden;
+        background-color: white;
+        border-left: 1px solid green;
+        border-right: 1px solid green;
+        padding-bottom: 6rem;
+       }
+       #contact-wrapper {
+        display: flex;
+        justify-content: center;
+       }
+       #contact-wrapper p {
+        display: flex;
+        justify-content: space-around;
+       }
+       #contact-wrapper p i {
+        font-size: 8rem;
+        color: black;
+       }
+       #contact-wrapper p i:hover {
+        color: #006600;
+       }
+       #inputs {
+        display: flex;
+        flex-flow: column wrap;
+        flex: 1 1 50%;
+        padding-left: 2rem;
+        padding-bottom: 3rem;
+       }
+       #top-input{
+        border-top-right-radius: 0.5rem;
+        border-top-left-radius: 0.5rem;
+       }
+       #inputs > * {
+        color: black;
+        background-color: white;
+        border-left: 1px solid black;
+        border-right: 1px solid black;
+        }
+       #inputs > *:focus {
+        outline: none;
+        /*background-color: gray;*/
+       }
+       #inputs > 
+       #textarea {
+        rows: 2;
+        columns: 20;
+        wrap: hard;
+       }
+       #submit-button {
+        background-color: white;
+        border: 1px solid black;
+        color: black;
+        border-bottom-right-radius: 0.5rem;
+        border-bottom-left-radius: 0.5rem;
+       }
+      #contact-wrapper p {
+        width: 50%;
+      }
+      #contact-wrapper form div {
+
+      }
+/* FOOTER */
+      footer {
+        background-color: #006600;
+        /*#00b300;*/
+        color: white;
+        overflow: hidden;
+        padding-bottom: 9rem;
+      }
+      footer p {
+        /*margin-top: 3rem;*/
+        text-align: center;
+      }
+      footer p:first-child {
+        margin-top: 7rem;
+      }
+      footer p:nth-child(2) {
+        margin-top: 2rem;
+        font-size: 0.8rem;
+      }
+      .fa {
+        color: white;
+        font-size: 4rem;
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <nav class="flex-nav">
+        <p> <img src="#"></p>
+        <ul>
+          <li><a href="#about-scroll-stop">About</a></li>
+          <li><a href="#portfolio-scroll-stop">Portfolio</a></li>
+          <li><a href="#contact-scroll-stop">Contact</a></li>
+        </ul>
+      </nav>
+      <main>
+        <section id="main">
+            <h3 id="about-scroll-stop"> About </h3>
+          <div id="intro">
+
+            <div id="text">
+              <p>I love coding.  Over the last year-and-a-half, I've spent nearly all of my free time doing it. Someday soon it will be my profession.  Then I will be doing for a living what I used to do for fun. </p>
+              <br>
+              <!-- <hr> -->
+              <!-- <p>Front-End <i class="fa fa-ellipsis-v" aria-hidden="true"></i>Back-End<i class="fa fa-ellipsis-v" aria-hidden="true"></i>Databases</p> -->
+              <p><i class="devicon-ruby-plain"></i><i class="devicon-javascript-plain"></i><i class="devicon-html5-plain"></i><i class="devicon-css3-plain"></i><i class="devicon-bootstrap-plain"></i><i class="devicon-jquery-plain"></i><i class="devicon-postgresql-plain"></i><i class="devicon-rails-plain"></i></p>
+              <br>
+              <p> Ruby, Javascript, HTML5, CSS3, Bootstrap, jQuery, PostgreSQL, Ruby on Rails</p>
+            </div>
+            <div id="selfimage">
+              <img src="rsz_bobprofileraw.jpg">
+            </div>
+          </div>
+        </section>
+        <section id="portfolio">
+   <!--        <div class="headings"> PORTFOLIO
+
+          </div> -->
+          <h3 id="portfolio-scroll-stop"> Portfolio </h3>
+           <div id="images">
+            <img src="hotornot.jpg">
+       <!--    </div>
+          <div> -->
+            <img  src="boot-1620452_640.jpg">
+       <!--    </div>
+          <div> -->
+            <img src="zonein.png">
+       <!--    </div>
+          <div> -->
+            <img src="boot-1620452_640.jpg">
+        <!--   </div>
+          <div> -->
+            <img src="boot-1620452_640.jpg">
+          <!-- </div>
+          <div> -->
+            <img src="boot-1620452_640.jpg">
+          </div>
+        </section>
+        <section id="contact" >
+          <h3 id="contact-scroll-stop">
+            Let's Connect
+          </h3>
+          <div id="contact-wrapper">
+            <form action="?" method="POST" id="inputs">
+<!--               <div class="g-recaptcha" data-sitekey="6LfLlgcUAAAAAOle_WnHNv21eeAvEbwmRT3gyg1A"></div>
+              <br/> -->
+              <!-- <div id="inputs"> -->
+                <input type="text" placeholder="Your name" id="top-input">
+                <input type="email" placeholder="Email">
+                <textarea rows="2" columns="20" wrap="hard" placeholder="Message"></textarea>
+                <input type="submit" value="Submit" id="submit-button">
+              <!-- </div> -->
+            </form>
+            <p><a href="https://twitter.com/smilesr120" target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a><a href="https://www.linkedin.com/in/robert-smiles-888668121?trk=nav_responsive_tab_profile" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a><a href="https://github.com/smilesr" target="_blank"><i class="fa fa-github-square" aria-hidden="true"></i></a></p>
+          </div>
+        
+        </section>
+      </main>
+      <footer>
+          <p>Made with <i class="fa fa-fire" aria-hidden="true"></i> and <i class="fa fa-heart" aria-hidden="true"></i> by Bob Smiles.</p>
+          <p>RGSJr © 2016. All Rights Reversed</p>
+        
+      </footer>
+
+    </div>
+  </body>
+
+</html>
